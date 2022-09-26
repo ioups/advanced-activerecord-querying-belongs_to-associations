@@ -3,7 +3,6 @@ require "spec_helper"
 describe Person do
   describe ".in_region" do
     it "returns people in the named region" do
-      pending "Fix this spec second"
 
       region = create(:region, name: "expected")
       other_region = create(:region, name: "other")

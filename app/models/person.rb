@@ -5,7 +5,7 @@ class Person < ActiveRecord::Base
   has_many :employees, class_name: "Person", foreign_key: :manager_id
 
   def self.in_region(region)
-    includes(location: :region).where(regions: {name: region})
+    includes(:location).merge(Location.in_region(region))
   end
 
   def self.alphabetically_by_region_and_location

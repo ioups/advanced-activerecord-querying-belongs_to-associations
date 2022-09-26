@@ -9,6 +9,6 @@ class Person < ActiveRecord::Base
   end
 
   def self.alphabetically_by_region_and_location
-    all
+    includes(location: :region).order('regions.name, locations.name, people.name')
   end
 end

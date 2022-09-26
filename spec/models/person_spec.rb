@@ -21,7 +21,6 @@ describe Person do
 
   describe ".alphabetically_by_region_and_location" do
     it "orders people by region name, then location name, then person name" do
-      pending "Fix this spec last"
 
       region2 = create(:region, name: "region2")
       region3 = create(:region, name: "region3")
